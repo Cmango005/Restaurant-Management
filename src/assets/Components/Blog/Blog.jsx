@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 
 const Blog = () => {
     return (
-        <div>
-            <div className="max-w-xl mx-auto bg-white rounded-lg p-4 shadow-lg">
+        <div> 
+            <Navbar></Navbar>
+            <div className="max-w-xl mx-auto bg-white rounded-lg p-4 mt-28 shadow-lg">
                 <h1 className="text-3xl font-bold mb-4">Understanding Key Concepts in Web Development and Node.js</h1>
 
                 <div className="mb-8">

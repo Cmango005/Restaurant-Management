@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
-
+import './Registration.css'
+import Navbar from "../Navbar/Navbar";
 
 
 const Registration = () => {
@@ -32,24 +33,13 @@ const Registration = () => {
         createUser(email, password, name, photo)
             .then(result => {
 
-                const user = { email };
+                
 
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL: photo
                 })
-                fetch("  https://brand-assignment-server-mmwzcddhs-cmango005.vercel.app/user", {
-                    method: "POST",
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(user)
-                })
-                    .then(res => res.json)
-                    .then(data => {
-                        console.log(data)
-
-                    })
+                
             })
             .catch(error => {
                 console.log(error)
@@ -58,38 +48,47 @@ const Registration = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero back min-h-screen ">
+            <Navbar></Navbar>
+            <div className="hero-content  flex-col lg:flex-row-reverse">
 
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleRegister} className="card-body p-5">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+                <div className=" w-full shadow-2xl ">
+                    <form onSubmit={handleRegister} className=" backdrop-blur bg-transparent p-5">
+
+                       <div className="flex gap-5">
+                       <div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white font-semibold text-lg">Name</span>
+                                </label>
+                                <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white font-semibold text-lg">Photo</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                            </div>
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo</span>
-                            </label>
-                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                        <div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white font-semibold text-lg">Email</span>
+                                </label>
+                                <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white font-semibold text-lg">Password</span>
+                                </label>
+                                <input type="password" placeholder=" password" name="password" className="input input-bordered" required />
+                            </div>
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                        </div>
+
+                       </div>
 
                         <div className="form-control mt-4">
-                            <button className="btn btn-primary">Registration</button>
+                            <button className="advanced-button">Registration</button>
                         </div>
 
                     </form>

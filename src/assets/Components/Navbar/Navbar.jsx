@@ -21,7 +21,7 @@ const Navbar = () => {
                         <img className="h-14 w-32 shadow-2xl" src="https://i.ibb.co/QJjkZpq/restaurant-logo-design-template-free-vector.jpg" alt="" />
                     </div>
                     <div >
-                        <nav className="flex space-x-10 gap-6 ">
+                        <nav className="flex backdrop-blur bg-transparent space-x-10 gap-6 ">
                             <NavLink to="/"><h3>Home</h3></NavLink>
                             <NavLink to="/menu"><h3>All Food Items</h3></NavLink>
                             <NavLink to="/blog"><h3>Blog</h3></NavLink>
@@ -58,21 +58,21 @@ const Navbar = () => {
                                                 className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
                                                 role="menuitem"
                                             >
-                                                <button >My added food items</button>
+                                                <Link to='/items/:user'><button >My added food items</button></Link>
                                             </li>
                                             <li
                                                
                                                 className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
                                                 role="menuitem"
                                             >
-                                                <button >Add a food item</button>
+                                                <Link to='/add-item'><button >Add a food item</button></Link>
                                             </li>
                                             <li
                                                
                                                className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
                                                role="menuitem"
                                            >
-                                               <button >My ordered food items</button>
+                                               <Link to='/my-items'><button >My ordered food items</button></Link>
                                            </li>
                                             <button onClick={handleSignOut} className="advanced-button flex items-center justify-between">LogOut <FiLogOut></FiLogOut></button>
                                         </div>
