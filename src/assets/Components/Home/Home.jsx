@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <section className="mx-auto container">
-               
+               <img src="https://i.ibb.co/Q834Lf9/pexels-ljupco-dzambazovski-1346132.jpg" alt="" />
                 <Navbar></Navbar>
                 <div data-aos="fade-up"
                     data-aos-anchor-placement="center-bottom" className="text-center top-72 absolute left-20 mr-14">
