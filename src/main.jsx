@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/my-addItems',
-        element:<MyAdd></MyAdd>
+        element:<PrivateRoute><MyAdd></MyAdd></PrivateRoute>
       },
       {
         path:"/menu/:id",
