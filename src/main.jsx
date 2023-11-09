@@ -13,6 +13,8 @@ import AuthProvider from './providers/AuthProvider';
 import Registration from './assets/Components/Registration/Registration';
 import Blog from './assets/Components/Blog/Blog';
 import Menu from './assets/Components/Menu/Menu';
+import Details from './assets/Components/Details/Details';
+import PrivateRoute from './assets/Components/Private/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,7 +40,14 @@ const router = createBrowserRouter([
       {
         path:'/menu',
         element:<Menu></Menu>
-      }
+      },
+      {
+        path:'/detail/:id',
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/detail/${params.id}`)
+
+      },
+     
     ]
   },
 ]);

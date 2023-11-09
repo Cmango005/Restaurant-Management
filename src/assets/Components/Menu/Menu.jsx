@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import './Menu.css'
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     const [menu,setMenu]= useState([]);
@@ -25,7 +26,7 @@ const Menu = () => {
                         <p className="text-white font-bold text-lg">Food Category:{items.FoodCategory}</p>
                         <p className="text-white font-bold text-lg">Price:${items.Price}</p>
                         <p className="text-white font-bold text-lg">Quantity:{items.Quantity}</p>
-                        <button className="advanced-button">Details</button>
+                        <Link to={`/detail/${items._id}`}><button className="advanced-button">Details</button></Link>
                         </div>
 
                     </div>)
