@@ -58,7 +58,7 @@ const Navbar = () => {
                                                 className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
                                                 role="menuitem"
                                             >
-                                                <Link to='/items/:user'><button >My added food items</button></Link>
+                                                <Link to='/my-addItems'><button >My added food items</button></Link>
                                             </li>
                                             <li
                                                

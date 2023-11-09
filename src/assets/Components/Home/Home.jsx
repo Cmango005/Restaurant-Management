@@ -49,7 +49,7 @@ const Home = () => {
                                 <p className="text-white font-bold text-lg">Food Category:{items.FoodCategory}</p>
                                 <p className="text-white font-bold text-lg">Price:${items.Price}</p>
                                 <p className="text-white font-bold text-lg">Quantity:{items.Quantity}</p>
-                                <Link to={`/detail/${items._id}`}><button className="advanced-button">Details</button></Link>  
+                                <Link to={`/detail/${items._id}`}><button className="advanced-button">Details</button></Link>
                             </div>
 
                         </div>)
@@ -62,7 +62,52 @@ const Home = () => {
                     </div>
                 }
             </section>
+            <section className='mx-auto container mt-16'>
 
+                <div className="hero min-h-screen bg-base-200">
+                    <div className='mb-96'>
+                        <p className='font-bold text-2xl text-center'>IF U HAVE ANY COMPLAIN ABOUT US FEEL FREE TO FILL UP THIS COMPLAIN BOX</p>
+                    </div>
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+
+                        <div className=" flex-shrink-0 w-full bg-slate-100  mt-16 rounded-xl shadow-2xl p-1 lg:p-6 ">
+                            <form className="">
+                                <div className='flex gap-4'>
+                                    <div>
+                                        <div className="form-control">
+                                            <label className="label">Your Name:</label>
+                                            <input type="text" placeholder="name" className="input input-bordered" required />
+                                        </div>
+                                        <div className="form-control">
+                                            <label className="label">
+                                                <span className="label-text">Email</span>
+                                            </label>
+                                            <input type="email" placeholder="email" className="input input-bordered" required />
+                                        </div>
+                                        <div className="form-control">
+                                            <label className="label">Your Phone:</label>
+                                            <input type="number" placeholder="phone" className="input input-bordered" required />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="form-control">
+                                            <label className="label">Your Complain:</label>
+                                            <textarea type="text" placeholder="your complain" className="input h-56 w-52" required></textarea>
+                                        </div>
+                                        <div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="form-control text-center mt-6">
+                                    <button className="btn btn-info">Submit Complain</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     );

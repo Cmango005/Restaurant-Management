@@ -15,6 +15,9 @@ import Blog from './assets/Components/Blog/Blog';
 import Menu from './assets/Components/Menu/Menu';
 import Details from './assets/Components/Details/Details';
 import PrivateRoute from './assets/Components/Private/PrivateRoute';
+import MyItems from './assets/Components/MyItems/MyItems';
+import AddNewItems from './assets/Components/AddNewItems/AddNewItems';
+import MyAdd from './assets/Components/MyAdd/MyAdd';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,8 +48,20 @@ const router = createBrowserRouter([
         path:'/detail/:id',
         element:<PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/detail/${params.id}`)
+      },
+      {
+        path:'/my-items',
+        element:<PrivateRoute><MyItems></MyItems></PrivateRoute>,
 
       },
+      {
+        path:'/add-item',
+        element:<PrivateRoute><AddNewItems></AddNewItems></PrivateRoute>
+      },
+      {
+        path:'/my-addItems',
+        element:<MyAdd></MyAdd>
+      }
      
     ]
   },
