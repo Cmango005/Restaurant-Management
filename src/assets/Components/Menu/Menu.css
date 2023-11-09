@@ -1,25 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-
-nav a.active {
-    text-decoration: underline;
-    color: rgb(181, 157, 157);
-
+.card:hover .card-body{
+ right: 0;
 }
-
-nav h3 {
-    color: #fff;
-    font-size: x-large;
-    font-weight: 700;
-    padding: 5px;
-    border-radius: 10px;
-
+.card-body{
+    transition: 2s;
 }
-
-.des {
-    font-family: "Agbalumo";
-    font-size: 32px;
-}
-
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -50,7 +34,7 @@ nav h3 {
     cursor: pointer;
     overflow: hidden;
     position: relative;
-
+    
 }
 
 .advanced-button:hover {
@@ -74,12 +58,4 @@ nav h3 {
 
 .advanced-button:hover::before {
     transform: translate(-50%, -50%) scale(3);
-}
-
-.card:hover .card-body {
-    right: 0;
-}
-
-.card-body {
-    transition: 2s;
 }

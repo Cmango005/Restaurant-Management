@@ -12,6 +12,7 @@ import Login from './assets/Components/Login/Login';
 import AuthProvider from './providers/AuthProvider';
 import Registration from './assets/Components/Registration/Registration';
 import Blog from './assets/Components/Blog/Blog';
+import Menu from './assets/Components/Menu/Menu';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +34,10 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element:<Blog></Blog>
-
+      },
+      {
+        path:'/menu',
+        element:<Menu></Menu>
       }
     ]
   },
