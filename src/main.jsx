@@ -18,6 +18,7 @@ import PrivateRoute from './assets/Components/Private/PrivateRoute';
 import MyItems from './assets/Components/MyItems/MyItems';
 import AddNewItems from './assets/Components/AddNewItems/AddNewItems';
 import MyAdd from './assets/Components/MyAdd/MyAdd';
+import Update from './assets/Components/Update/Update';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,7 +62,12 @@ const router = createBrowserRouter([
       {
         path:'/my-addItems',
         element:<MyAdd></MyAdd>
-      }
+      },
+      {
+        path:"/menu/:id",
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({params})=> fetch(`  http://localhost:5000/menu/${params.id}`)
+      },
      
     ]
   },

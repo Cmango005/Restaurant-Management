@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { AuthContext } from "../../../providers/AuthProvider";
 import './Add.css'
+import { Link } from "react-router-dom";
 
 const MyAdd = () => {
     const { user } = useContext(AuthContext);
@@ -24,7 +25,7 @@ const MyAdd = () => {
                            <p className="text-white font-bold text-lg">Name: {m.FoodName}</p>
                            <p className="text-white font-bold text-lg">Price: {m.Price}$</p>
                            <p className="text-white font-bold text-lg">Ingredients: {m.Description} </p>
-                           <button className="advanced-button">UPDATE</button>
+                           <Link to={`/menu/${m._id}`}><button className="advanced-button">UPDATE</button></Link>
                         </div>
                     </div>)
                 }
