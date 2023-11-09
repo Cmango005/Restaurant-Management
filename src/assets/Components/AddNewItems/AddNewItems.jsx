@@ -2,7 +2,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './New.css'
 import Navbar from '../Navbar/Navbar';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
+
 const AddNewItems = () => {
+    const { user } = useContext(AuthContext);
     const handleAddProduct = event => {
         event.preventDefault();
         const form = event.target;
@@ -12,9 +16,9 @@ const AddNewItems = () => {
         const Price = form.Price.value;
         const Description = form.Description.value;
         const Quantity = form.Quantity.value;
+        const email = user?.email;
 
-
-        const newMenu = { FoodImage, FoodName, FoodCategory, Price, Description, Quantity }
+        const newMenu = { FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email}
         console.log(newMenu)
         fetch("http://localhost:5000/menu", {
             method: 'POST',
@@ -99,8 +103,11 @@ const AddNewItems = () => {
 
 
                         </div>
-
-                        <button className="advanced-button" type="submit" value="Add Product">Add Product</button>
+                        <div className="form-control user-box">
+                            <label className='text-white'>Added By:</label>
+                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                        </div>
+                        <button className="advanced-button mt-2" type="submit" value="Add Product">Add Product</button>
                         <ToastContainer />
                     </div>
 

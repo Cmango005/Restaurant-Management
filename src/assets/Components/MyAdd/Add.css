@@ -1,0 +1,55 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.advanced-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffffca;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff5fdc, #f1b6f1, #ff5ffffa, #f531cb);
+    background-size: 300% 300%;
+    animation: gradientAnimation 4s linear infinite;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.advanced-button:hover {
+    border: 2px solid #fff;
+    color: black;
+}
+
+.advanced-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 300%;
+    padding-top: 300%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s;
+}
+
+.advanced-button:hover::before {
+    transform: translate(-50%, -50%) scale(3);
+}
