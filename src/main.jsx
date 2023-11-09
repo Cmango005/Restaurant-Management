@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path:'/detail/:id',
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/detail/${params.id}`)
+        loader: ({params})=> fetch(`https://restaurant-server-green.vercel.app/detail/${params.id}`)
       },
       {
         path:'/my-items',
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       {
         path:"/menu/:id",
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params})=> fetch(`  http://localhost:5000/menu/${params.id}`)
+        loader: ({params})=> fetch(`  https://restaurant-server-green.vercel.app/menu/${params.id}`)
       },
      
     ]

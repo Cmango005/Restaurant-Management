@@ -16,7 +16,7 @@ const Update = () => {
         const Description = form.Description.value;
         const Quantity = form.Quantity.value;
         const updatedProduct = { FoodImage, FoodName, FoodCategory, Price, Description, Quantity}
-        fetch(`  http://localhost:5000/menu/${_id}`, {
+        fetch(`  https://restaurant-server-green.vercel.app/menu/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

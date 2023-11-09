@@ -18,7 +18,7 @@ const Details = () => {
         
         const order = { FoodImage, FoodName, FoodCategory, Price, MadeBy, FoodOrigin, Description, email: user.email  } ;
         console.log(order)
-        fetch('http://localhost:5000/order',{
+        fetch('https://restaurant-server-green.vercel.app/order',{
           method: 'POST',
           headers: {
             'content-type': 'application/json'

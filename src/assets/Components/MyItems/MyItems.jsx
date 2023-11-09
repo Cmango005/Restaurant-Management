@@ -9,14 +9,14 @@ const MyItems = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrder] = useState([])
 
-    const url = `http://localhost:5000/order?email=${user?.email}`
+    const url = `https://restaurant-server-green.vercel.app/order?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [url])
     const handleCancel = id =>{
-        fetch(`http://localhost:5000/order/${id}`,{
+        fetch(`https://restaurant-server-green.vercel.app/order/${id}`,{
          method: 'DELETE'
         })
         .then(res=> res.json())

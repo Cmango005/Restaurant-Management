@@ -20,7 +20,7 @@ const AddNewItems = () => {
 
         const newMenu = { FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email}
         console.log(newMenu)
-        fetch("http://localhost:5000/menu", {
+        fetch("https://restaurant-server-green.vercel.app/menu", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

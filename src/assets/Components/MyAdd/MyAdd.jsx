@@ -8,7 +8,7 @@ const MyAdd = () => {
     const { user } = useContext(AuthContext);
     const [myAdd, setMyAdd] = useState([])
 
-    const url = `http://localhost:5000/menu/my?email=${user?.email}`
+    const url = `https://restaurant-server-green.vercel.app/menu/my?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

@@ -5,13 +5,14 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-// ..
+
+
 AOS.init();
 const Home = () => {
     const [menu, setMenu] = useState([]);
     const [showAll, setShowAll] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/menu')
+        fetch('https://restaurant-server-green.vercel.app/menu')
             .then(res => res.json())
             .then(data => {
                 const result = data.sort((a, b) => b.OrderNumber - a.OrderNumber);
@@ -23,6 +24,7 @@ const Home = () => {
     };
     return (
         <div>
+          
             <section className="mx-auto container">
                 <img src="https://i.ibb.co/Q834Lf9/pexels-ljupco-dzambazovski-1346132.jpg" alt="" />
                 <Navbar></Navbar>
@@ -40,7 +42,7 @@ const Home = () => {
             </Marquee>
             <section>
 
-                <div className="mt-16 grid grid-cols-3 gap-5 ">
+                <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-5 ">
                     {
                         menu.slice(0, showAll ? menu.length : 6).map((items) => <div className="mx-auto relative card overflow-hidden  w-96" key={items._id}>
                             <img className="w-full h-full object-cover" src={items.FoodImage} alt="" />
