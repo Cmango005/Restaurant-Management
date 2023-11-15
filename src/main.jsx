@@ -19,6 +19,7 @@ import MyItems from './assets/Components/MyItems/MyItems';
 import AddNewItems from './assets/Components/AddNewItems/AddNewItems';
 import MyAdd from './assets/Components/MyAdd/MyAdd';
 import Update from './assets/Components/Update/Update';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,7 +54,6 @@ const router = createBrowserRouter([
       {
         path:'/my-items',
         element:<PrivateRoute><MyItems></MyItems></PrivateRoute>,
-
       },
       {
         path:'/add-item',
@@ -64,10 +64,10 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyAdd></MyAdd></PrivateRoute>
       },
       {
-        path:"/menu/:id",
+        path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params})=> fetch(`  https://restaurant-server-green.vercel.app/menu/${params.id}`)
-      },
+        loader:({params})=> fetch(`https://restaurant-server-green.vercel.app/menu/${params.id}`)
+      }
      
     ]
   },

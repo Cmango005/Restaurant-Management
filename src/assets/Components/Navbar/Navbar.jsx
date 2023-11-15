@@ -17,17 +17,18 @@ const Navbar = () => {
     }
     return (
         <div className="flex justify-between  p-5 top-0 absolute left-0 mx-auto container">
-                    <div className="">
+                    <div className="flex flex-row lg:space-x-60">
                         <img className="h-14 w-32 shadow-2xl" src="https://i.ibb.co/QJjkZpq/restaurant-logo-design-template-free-vector.jpg" alt="" />
-                    </div>
-                    <div >
-                        <nav className="flex backdrop-blur bg-transparent space-x-10 gap-6 ">
+                        <div >
+                        <nav className="flex flex-row backdrop-blur bg-transparent lg:p-1 lg:space-x-10 lg:gap-6 ">
                             <NavLink to="/"><h3>Home</h3></NavLink>
                             <NavLink to="/menu"><h3>All Food Items</h3></NavLink>
                             <NavLink to="/blog"><h3>Blog</h3></NavLink>
                         </nav>
                     </div>
 
+                    </div>
+                    
                     {
                         user ?
                             <div className="relative inline-block text-left">

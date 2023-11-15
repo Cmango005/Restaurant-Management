@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 
+
 AOS.init();
 const Home = () => {
     const [menu, setMenu] = useState([]);
@@ -24,17 +25,18 @@ const Home = () => {
     };
     return (
         <div>
-          
+
             <section className="mx-auto container">
                 <img src="https://i.ibb.co/Q834Lf9/pexels-ljupco-dzambazovski-1346132.jpg" alt="" />
-                <Navbar></Navbar>
                 <div data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" data-aos-duration="1500" className="text-center top-72 absolute left-20 mr-14">
-                    <p className="text-white des">
+                    data-aos-anchor-placement="center-bottom" data-aos-duration="1500" className="text-center  top-24 lg:top-72 absolute left-20 mr-14">
+                    <p className="text-white lg:text-2xl">
                         Experience a culinary journey at our restaurant, where we blend traditional flavors  with modern twists. Indulge in our diverse menu offering a range of mouthwatering dishes prepared with the freshest ingredients, promising a delightful dining experience for every palate
                     </p>
                     <Link to='/menu'><button className="advanced-button mt-5">MENU</button></Link>
                 </div>
+                <Navbar></Navbar>
+                
             </section>
 
             <Marquee>
@@ -56,13 +58,65 @@ const Home = () => {
 
                         </div>)
                     }
-
+                       
                 </div>
                 {!showAll && menu.length > 6 &&
                     <div className="flex justify-center mt-5">
                         <Link to='/menu'><button className="advanced-button" onClick={handleShowAll}>Show All</button></Link>
                     </div>
                 }
+            </section>
+
+            <section>
+                <div className="container mx-auto p-8">
+                    <h1 className="text-4xl font-bold mb-8">Restaurant Branch Locations</h1>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 1</h2>
+                            <p>Dhaka, Bangladesh</p>
+
+                        </div>
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 2</h2>
+                            <p>Chittagong, Bangladesh</p>
+
+                        </div>
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 3</h2>
+                            <p>Sylhet, Bangladesh</p>
+
+                        </div>
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 4</h2>
+                            <p>Rajshahi, Bangladesh</p>
+
+                        </div>
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 5</h2>
+                            <p>Barisal, Bangladesh</p>
+
+                        </div>
+
+
+                        <div className="bg-white p-4 rounded shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">Branch 6</h2>
+                            <p>Khulna, Bangladesh</p>
+
+                        </div>
+
+                    </div>
+                </div>
             </section>
             <section className='mx-auto container mt-16'>
 
@@ -110,7 +164,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };

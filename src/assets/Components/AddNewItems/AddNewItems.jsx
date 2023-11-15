@@ -16,9 +16,10 @@ const AddNewItems = () => {
         const Price = form.Price.value;
         const Description = form.Description.value;
         const Quantity = form.Quantity.value;
+        const OrderNumber = form.OrderNumber.value;
         const email = user?.email;
 
-        const newMenu = { FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email}
+        const newMenu = {OrderNumber, FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email}
         console.log(newMenu)
         fetch("https://restaurant-server-green.vercel.app/menu", {
             method: 'POST',
@@ -70,6 +71,14 @@ const AddNewItems = () => {
                                         placeholder="Food Category Name" className="input input-bordered"
                                     />
                                 </div>
+                                <div className="form-control">
+                                    <label className='text-white'>Order:</label>
+                                    <input
+                                        type="number"
+                                        name="OrderNumber"
+                                        placeholder="Unit" className="input input-bordered"
+                                    />
+                                </div>
                             </div>
 
                             <div className=" ">
@@ -98,15 +107,16 @@ const AddNewItems = () => {
                                         placeholder="Quantity" className="input input-bordered"
                                     />
                                 </div>
+                                <div className="form-control user-box">
+                            <label className='text-white'>Added By:</label>
+                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                        </div>
 
                             </div>
 
 
                         </div>
-                        <div className="form-control user-box">
-                            <label className='text-white'>Added By:</label>
-                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
-                        </div>
+                       
                         <button className="advanced-button mt-2" type="submit" value="Add Product">Add Product</button>
                         <ToastContainer />
                     </div>

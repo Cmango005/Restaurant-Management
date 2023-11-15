@@ -8,7 +8,7 @@ const MyAdd = () => {
     const { user } = useContext(AuthContext);
     const [myAdd, setMyAdd] = useState([])
 
-    const url = `https://restaurant-server-green.vercel.app/menu/my?email=${user?.email}`
+    const url = `  https://restaurant-server-green.vercel.app/menu?email=${user.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -25,7 +25,7 @@ const MyAdd = () => {
                            <p className="text-white font-bold text-lg">Name: {m.FoodName}</p>
                            <p className="text-white font-bold text-lg">Price: {m.Price}$</p>
                            <p className="text-white font-bold text-lg">Ingredients: {m.Description} </p>
-                           <Link to={`/menu/${m._id}`}><button className="advanced-button">UPDATE</button></Link>
+                           <Link to={`/update/${m._id}`}><button className="advanced-button">UPDATE</button></Link>
                         </div>
                     </div>)
                 }
