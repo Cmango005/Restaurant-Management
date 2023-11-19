@@ -5,8 +5,10 @@ import Navbar from "../Navbar/Navbar";
 const Blog = () => {
     return (
         <div> 
+            <div>
             <Navbar></Navbar>
-            <div className="max-w-xl mx-auto bg-white rounded-lg p-4 mt-28 shadow-lg">
+            </div>
+            <div style={{borderRadius:'0 0 20px 20px'}} className="max-w-xl mx-auto bg-white p-7 mt-28 shadow-lg">
                 <h1 className="text-3xl font-bold mb-4">Understanding Key Concepts in Web Development and Node.js</h1>
 
                 <div className="mb-8">

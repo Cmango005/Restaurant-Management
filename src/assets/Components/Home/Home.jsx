@@ -36,14 +36,14 @@ const Home = () => {
                     <Link to='/menu'><button className="advanced-button mt-5">MENU</button></Link>
                 </div>
                 <Navbar></Navbar>
-                
+
             </section>
 
-            <Marquee>
-                <i className=" text-white text-3xl font-bold flex justify-center mt-24 p-5"><p className="space-x-2">OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... </p></i>
-            </Marquee>
-            <section>
 
+            <section className="bg-slate-400">
+                <Marquee>
+                    <i className=" text-white text-3xl font-bold flex justify-center mt-24 p-5"><p className="space-x-2">OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... </p></i>
+                </Marquee>
                 <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-5 ">
                     {
                         menu.slice(0, showAll ? menu.length : 6).map((items) => <div className="mx-auto relative card overflow-hidden  w-96" key={items._id}>
@@ -58,7 +58,7 @@ const Home = () => {
 
                         </div>)
                     }
-                       
+
                 </div>
                 {!showAll && menu.length > 6 &&
                     <div className="flex justify-center mt-5">
@@ -69,7 +69,7 @@ const Home = () => {
 
             <section>
                 <div className="container mx-auto p-8">
-                    <h1 className="text-4xl font-bold mb-8">Restaurant Branch Locations</h1>
+                    <h1 className="text-4xl text-white font-bold mb-8">Restaurant Branch Locations</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 

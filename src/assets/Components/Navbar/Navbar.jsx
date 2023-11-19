@@ -20,10 +20,10 @@ const Navbar = () => {
                     <div className="flex flex-row lg:space-x-60">
                         <img className="h-14 w-32 shadow-2xl" src="https://i.ibb.co/QJjkZpq/restaurant-logo-design-template-free-vector.jpg" alt="" />
                         <div >
-                        <nav className="flex flex-row backdrop-blur bg-transparent lg:p-1 lg:space-x-10 lg:gap-6 ">
-                            <NavLink to="/"><h3>Home</h3></NavLink>
-                            <NavLink to="/menu"><h3>All Food Items</h3></NavLink>
-                            <NavLink to="/blog"><h3>Blog</h3></NavLink>
+                        <nav className="flex flex-row lg:p-1 lg:space-x-10 lg:gap-6 ">
+                            <NavLink to="/"><h3 className="text-emerald-500">Home</h3></NavLink>
+                            <NavLink to="/menu"><h3 className="text-emerald-500">All Food Items</h3></NavLink>
+                            <NavLink to="/blog"><h3 className="text-emerald-500">Blog</h3></NavLink>
                         </nav>
                     </div>
 
@@ -53,24 +53,24 @@ const Navbar = () => {
                                             aria-orientation="vertical"
                                             aria-labelledby="dropdown-menu-button"
                                         >
-                                            <h3 className="text-center text-sky-300 text-lg font-semibold">{user.displayName}</h3>
+                                            <h3 className="text-center text-sky-500 text-lg font-semibold">{user.displayName}</h3>
                                             <li
                                                
-                                                className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
+                                                className="block px-4 rounded-lg py-2 text-sm text-teal-600 hover:bg-gray-100"
                                                 role="menuitem"
                                             >
                                                 <Link to='/my-addItems'><button >My added food items</button></Link>
                                             </li>
                                             <li
                                                
-                                                className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
+                                                className="block px-4 rounded-lg py-2 text-sm text-teal-600 hover:bg-gray-100"
                                                 role="menuitem"
                                             >
                                                 <Link to='/add-item'><button >Add a food item</button></Link>
                                             </li>
                                             <li
                                                
-                                               className="block px-4 rounded-lg py-2 text-sm text-white hover:text-slate-900 hover:bg-gray-100"
+                                               className="block px-4 rounded-lg py-2 text-sm text-teal-600 hover:bg-gray-100"
                                                role="menuitem"
                                            >
                                                <Link to='/my-items'><button >My ordered food items</button></Link>

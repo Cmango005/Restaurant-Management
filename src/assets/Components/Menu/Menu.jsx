@@ -14,10 +14,10 @@ const Menu = () => {
         })
         },[menu])
     return (
-        <div>
-            <Navbar></Navbar>
-            <p className="text-center text-white text-3xl font-bold mt-24 p-5">OUR MENU ITEMS</p>
-             <div className="mt-36 grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="bg-slate-300">
+            
+            <p className="text-center text-3xl font-bold mt-24 p-5">OUR MENU ITEMS</p>
+             <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5">
                 {
                     menu.map(items=> <div className="mx-auto relative card overflow-hidden  w-96" key={items._id}>
                         <img className="w-full h-full object-cover" src={items.FoodImage} alt="" />
@@ -32,7 +32,7 @@ const Menu = () => {
                     </div>)
                 }
              </div>
-             
+             <Navbar></Navbar>
         </div>
     );
 };
