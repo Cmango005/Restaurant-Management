@@ -15,10 +15,10 @@ import Blog from './assets/Components/Blog/Blog';
 import Menu from './assets/Components/Menu/Menu';
 import Details from './assets/Components/Details/Details';
 import PrivateRoute from './assets/Components/Private/PrivateRoute';
-import MyItems from './assets/Components/MyItems/MyItems';
 import AddNewItems from './assets/Components/AddNewItems/AddNewItems';
-import MyAdd from './assets/Components/MyAdd/MyAdd';
 import Update from './assets/Components/Update/Update';
+import MyAddedItems from './assets/Components/MyAdd/MyAddedItems';
+import MyOrderedItems from './assets/Components/MyItems/MyOrderedItems';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/my-items',
-        element:<PrivateRoute><MyItems></MyItems></PrivateRoute>,
+        element:<PrivateRoute><MyOrderedItems></MyOrderedItems></PrivateRoute>,
       },
       {
         path:'/add-item',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/my-addItems',
-        element:<PrivateRoute><MyAdd></MyAdd></PrivateRoute>
+        element:<PrivateRoute><MyAddedItems></MyAddedItems></PrivateRoute>
       },
       {
         path:'/update/:id',

@@ -5,7 +5,7 @@ import './MyItems.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Ordered from "../MyOrder/Ordered";
-const MyItems = () => {
+const MyOrderedItems = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrder] = useState([])
     const [menu, setMenu] = useState([])
@@ -77,4 +77,4 @@ const MyItems = () => {
     );
 };
 
-export default MyItems;
+export default  MyOrderedItems;

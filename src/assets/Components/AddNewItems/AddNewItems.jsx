@@ -19,7 +19,7 @@ const AddNewItems = () => {
         const OrderNumber = form.OrderNumber.value;
         const email = user?.email;
 
-        const newMenu = {OrderNumber, FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email}
+        const newMenu = { OrderNumber, FoodImage, FoodName, FoodCategory, Price, Description, Quantity, email }
         console.log(newMenu)
         fetch("https://restaurant-server-green.vercel.app/menu", {
             method: 'POST',
@@ -108,15 +108,18 @@ const AddNewItems = () => {
                                     />
                                 </div>
                                 <div className="form-control user-box">
-                            <label className='text-white'>Added By:</label>
-                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
-                        </div>
+                                    <label className='text-white'>Added By:</label>
+                                    <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                                </div>
 
                             </div>
-
+                            <div className="form-control user-box">
+                                <label className='text-white'>Added Date:</label>
+                                <input type="date"  name="date" className="input input-bordered" required />
+                            </div>
 
                         </div>
-                       
+
                         <button className="advanced-button mt-2" type="submit" value="Add Product">Add Product</button>
                         <ToastContainer />
                     </div>

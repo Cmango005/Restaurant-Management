@@ -4,7 +4,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import './Add.css'
 import { Link } from "react-router-dom";
 
-const MyAdd = () => {
+const MyAddedItems = () => {
     const { user } = useContext(AuthContext);
     const [myAdd, setMyAdd] = useState([])
 
@@ -34,4 +34,4 @@ const MyAdd = () => {
     );
 };
 
-export default MyAdd;
+export default MyAddedItems;
