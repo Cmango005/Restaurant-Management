@@ -24,7 +24,7 @@ const Home = () => {
         setShowAll(!showAll);
     };
     return (
-        <div>
+        <div data-theme="synthwave">
 
             <section className="mx-auto container">
                 <img src="https://i.ibb.co/Q834Lf9/pexels-ljupco-dzambazovski-1346132.jpg" alt="" />
@@ -40,7 +40,7 @@ const Home = () => {
             </section>
 
 
-            <section className="bg-slate-400">
+            <section className="">
                 <Marquee>
                     <i className=" text-white text-3xl font-bold flex justify-center mt-24 p-5"><p className="space-x-2">OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... OUR TOP SELLING ITEMS.... </p></i>
                 </Marquee>
@@ -48,7 +48,7 @@ const Home = () => {
                     {
                         menu.slice(0, showAll ? menu.length : 6).map((items) => <div className="mx-auto relative card overflow-hidden  w-96" key={items._id}>
                             <img className="w-full h-full object-cover" src={items.FoodImage} alt="" />
-                            <div className="w-full h-full top-0 -right-full card-body  p-8 absolute backdrop-blur-sm bg-transparent flex flex-col justify-center">
+                            <div className="w-full h-full top-0 -right-full card-body  p-8 absolute backdrop-blur-xl bg-transparent flex flex-col justify-center">
                                 <p className="uppercase text-white font-bold text-lg">Food Name:{items.FoodName}</p>
                                 <p className="text-white font-bold text-lg">Food Category:{items.FoodCategory}</p>
                                 <p className="text-white font-bold text-lg">Price:${items.Price}</p>
@@ -69,47 +69,47 @@ const Home = () => {
 
             <section>
                 <div className="container mx-auto p-8">
-                    <h1 className="text-4xl text-white font-bold mb-8">Restaurant Branch Locations</h1>
+                    <h1 className="text-4xl text-white  font-bold mb-8">Restaurant Branch Locations</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 1</h2>
                             <p>Dhaka, Bangladesh</p>
 
                         </div>
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 2</h2>
                             <p>Chittagong, Bangladesh</p>
 
                         </div>
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 3</h2>
                             <p>Sylhet, Bangladesh</p>
 
                         </div>
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 4</h2>
                             <p>Rajshahi, Bangladesh</p>
 
                         </div>
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 5</h2>
                             <p>Barisal, Bangladesh</p>
 
                         </div>
 
 
-                        <div className="bg-white p-4 rounded shadow-md">
+                        <div className="bg-white text-black p-4 rounded shadow-md">
                             <h2 className="text-2xl font-bold mb-4">Branch 6</h2>
                             <p>Khulna, Bangladesh</p>
 
@@ -120,7 +120,7 @@ const Home = () => {
             </section>
             <section className='mx-auto container mt-16'>
 
-                <div className="hero min-h-screen bg-base-200">
+                <div className="hero min-h-screen ">
                     <div className='mb-96'>
                         <p className='font-bold text-2xl text-center'>IF U HAVE ANY COMPLAIN ABOUT US FEEL FREE TO FILL UP THIS COMPLAIN BOX</p>
                     </div>

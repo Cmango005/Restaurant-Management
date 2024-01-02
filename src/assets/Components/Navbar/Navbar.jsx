@@ -16,14 +16,14 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
     return (
-        <div className="flex justify-between  p-5 top-0 absolute left-0 mx-auto container">
+        <div className="flex justify-between  p-5 top-0 z-20 bg-transparent backdrop-blur-lg fixed left-0 mx-auto container">
                     <div className="flex flex-row lg:space-x-60">
                         <img className="h-14 w-32 shadow-2xl" src="https://i.ibb.co/QJjkZpq/restaurant-logo-design-template-free-vector.jpg" alt="" />
                         <div >
                         <nav className="flex flex-row lg:p-1 lg:space-x-10 lg:gap-6 ">
-                            <NavLink to="/"><h3 className="text-emerald-500">Home</h3></NavLink>
-                            <NavLink to="/menu"><h3 className="text-emerald-500">All Food Items</h3></NavLink>
-                            <NavLink to="/blog"><h3 className="text-emerald-500">Blog</h3></NavLink>
+                            <NavLink to="/"><h3 className="text-blue-500">Home</h3></NavLink>
+                            <NavLink to="/menu"><h3 className="text-blue-500">All Food Items</h3></NavLink>
+                            <NavLink to="/blog"><h3 className="text-blue-500">Blog</h3></NavLink>
                         </nav>
                     </div>
 

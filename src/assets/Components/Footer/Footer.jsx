@@ -1,10 +1,15 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Footer = () => {
+    const subscribe = () =>{
+        toast.success("Congratulation for Your Subscription")
+    }
     return (
-        <div className="container mx-auto py-8 bg-white">
+        <div className="container mx-auto">
 
-            <footer className="bg-gray-900 text-white">
+            <footer className=" text-white">
                 <div className="container mx-auto p-8">
                     <div className="flex flex-col lg:flex-row justify-around">
 
@@ -23,8 +28,9 @@ const Footer = () => {
                                 <p>Phone: +1 (123) 456-7890</p>
                             </div>
                             <div className="flex">
-                                <input type="text" placeholder="username@site.com" className="input  w-full pr-16" />
-                                <button className="btn btn-primary rounded-l-none">Subscribe</button>
+                                <input type="text" placeholder="username@site.com" className="input text-black w-full pr-16" />
+                                <button onClick={subscribe} className="btn btn-primary rounded-l-none">Subscribe</button>
+                                <ToastContainer></ToastContainer>
                             </div>
                         </div>
                         <div className="space-y-4">
